@@ -1,0 +1,475 @@
+/* ==========================================================================
+   1. CONFIGURAÇÕES GERAIS E BASE
+   ========================================================================== */
+body {
+    background-image: radial-gradient(circle at center, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 100%);
+    background-attachment: fixed; 
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh; 
+}
+
+/* ==========================================================================
+   2. MENU SUPERIOR (BOTÕES DE NAVEGAÇÃO)
+   ========================================================================== */
+.menu-topo {
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;         
+    gap: 20px;                   
+    max-width: 950px;
+    width: 90%;
+    margin: 40px auto 20px auto; 
+}
+
+.Style_P_text_3 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: normal;
+    color: white;
+    font-size: 28px;             
+    text-decoration: none;       
+    border: 2px solid #333333;   
+    padding: 10px 20px;          
+    background-color: #121212;   
+    transition: all 0.3s ease;   
+}
+
+.Style_P_text_3:hover {
+    color: black;                         
+    background-color: rgb(131, 181, 131); 
+    border-color: rgb(131, 181, 131);     
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   3. TIPOGRAFIA E TEXTOS DO CONTEÚDO
+   ========================================================================== */
+.Style_P_text_2 {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: normal;
+    color: white;
+    text-align: justify;
+    font-size: 30px;
+    line-height: 1.0;
+    max-width: 750px;
+    width: 90%;
+    margin: 10px auto;
+}
+
+.Style_P_text {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: normal;
+    color: rgb(218, 218, 218);
+    text-align: justify;
+    font-size: 20px;
+    line-height: 1.6;
+    max-width: 750px;
+    margin: 0;
+}
+
+.Style_P_text_5 {
+    font-family:'Times New Roman', Times, serif;
+    font-style: normal;
+    color: rgb(154, 204, 154);
+    text-align: justify;
+    font-size: 20px;
+    line-height: 1.0;
+    max-width: 1400px;
+    width: 90%;
+    margin: 20px auto;
+}
+
+/* ==========================================================================
+   4. SEÇÃO SOBRE MIM (FOTO + BIO LADO A LADO)
+   ========================================================================== */
+.container_about {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    max-width: 1400px;
+    width: 95%;
+    margin: 40px auto;
+}
+
+#img_scale {
+    display: block;
+    width: 320px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.box_under_text_2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 750px;
+}
+
+/* ==========================================================================
+   5. ESTRUTURA DAS 3 COLUNAS INFERIORES
+   ========================================================================== */
+.secoes-lado-a-lado {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    max-width: 1000px;
+    width: 95%;
+    margin: 50px auto;
+}
+
+.coluna-portfolio {
+    flex: 1;
+    min-width: 280px;
+}
+
+/* ==========================================================================
+   6. OBJETOS GEOMÉTRICOS E DECORAÇÃO (RODAPÉ)
+   ========================================================================== */
+.retangulo-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 40px auto;
+}
+
+.retangulo {
+    width: 500px;
+    height: 10px;
+    background-color: gray;
+}
+
+/* ==========================================================================
+   7. MARCA D'ÁGUA NO BACKGROUND (CORRIGIDO PARA ESQ / DIR)
+   ========================================================================== */
+.marca-dagua-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;        
+    pointer-events: none; 
+    overflow: hidden;
+}
+
+/* Lado Esquerdo */
+.forma-retangulo-esq {
+    position: absolute;
+    top: 15%;            
+    left: -20px;         
+    width: 500px;
+    height: 180px;
+    background-color: gray;
+    opacity: 0.12;       
+    transform: rotate(-15deg); 
+}
+
+.forma-triangulo-esq {
+    position: absolute;
+    bottom: 5%;         
+    right: 85%;           
+    width: 0;
+    height: 0;
+    border-left: 200px solid transparent;
+    border-right: 300px solid transparent;
+    border-bottom: 200px solid rgb(173, 173, 173); 
+    opacity: 0.12;       
+    transform: rotate(25deg);  
+}
+
+/* Lado Direito */
+.forma-retangulo-dir {
+    position: absolute;
+    top: 15%;            
+    right: -20px;        
+    width: 500px;
+    height: 180px;
+    background-color: gray;
+    opacity: 0.12;       
+    transform: rotate(15deg); 
+}
+
+.forma-triangulo-dir {
+    position: absolute;
+    bottom: 5%;         
+    right: -100px;       
+    width: 0;
+    height: 0;
+    border-left: 300px solid transparent; 
+    border-right: 200px solid transparent;
+    border-bottom: 200px solid rgb(173, 173, 173); 
+    opacity: 0.12;       
+    transform: rotate(-25deg); 
+}
+
+/* ==========================================================================
+   8. RESPONSIVIDADE (PROTEÇÃO TOTAL PARA CELULAR E TABLETS)
+   ========================================================================== */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+
+    .menu-topo {
+        flex-wrap: wrap;       
+        justify-content: center; 
+        gap: 10px;
+        margin: 20px auto;
+    }
+
+    .Style_P_text_3 {
+        font-size: 20px;       
+        padding: 8px 16px;
+        width: 100%;           
+        text-align: center;
+    }
+
+    .container_about {
+        flex-direction: column; 
+        align-items: center;    
+        gap: 20px;
+    }
+
+    #img_scale {
+        width: 80%;            
+        max-width: 280px;      
+    }
+
+    .secoes-lado-a-lado {
+        flex-direction: column; 
+        gap: 40px;              
+    }
+
+    .coluna-portfolio {
+        width: 100%;            
+        min-width: unset;
+    }
+
+    .forma-retangulo-esq {
+        width: 180px;
+        height: 80px;
+        top: 8%;
+        left: -40px;
+        opacity: 0.05;
+    }
+
+    .forma-retangulo-dir {
+        width: 180px;
+        height: 80px;
+        top: 8%;
+        right: -40px;
+        opacity: 0.05;
+    }
+
+    .forma-triangulo-esq,
+    .forma-triangulo-dir {
+        display: none; 
+    }
+
+    .projeto-resumo {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* ==========================================================================
+   9. PAINEL DE PROJETOS (INTERATIVO)
+   ========================================================================== */
+.container-portfolio-projetos {
+    max-width: 950px;
+    width: 90%;
+    margin: 40px auto;
+}
+
+.projeto-card {
+    background-color: #121212;
+    border: 2px solid #333333;
+    margin-bottom: 20px;
+    transition: border-color 0.3s ease;
+}
+
+.projeto-card[open] {
+    border-color: rgb(131, 181, 131); 
+}
+
+.projeto-resumo {
+    padding: 20px;
+    cursor: pointer;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    list-style: none; 
+}
+
+.projeto-resumo::-webkit-details-marker {
+    display: none;
+}
+
+.projeto-info-principal {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.projeto-nome {
+    font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+    font-size: 24px;
+    color: white;
+}
+
+.projeto-data {
+    font-family: 'Gill Sans', sans-serif;
+    font-size: 14px;
+    color: #888888;
+}
+
+.projeto-techs {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.badge-tech {
+    background-color: #222222;
+    color: rgb(154, 204, 154); 
+    border: 1px solid #444444;
+    padding: 4px 10px;
+    font-size: 14px;
+    font-family: 'Gill Sans', sans-serif;
+}
+
+.projeto-detalhes {
+    padding: 0 20px 20px 20px;
+    border-top: 1px solid #222222;
+    margin-top: 5px;
+    animation: deslizarAberto 0.3s ease-out; 
+}
+
+@keyframes deslizarAberto {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ==========================================================================
+   10. MINIATURA E ZOOM DE PRINTS DO PORTFÓLIO
+   ========================================================================== */
+.container-print-projeto {
+    margin: 20px 0;
+    max-width: 100%;
+}
+
+.container-print-projeto a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+.print-miniatura {
+    width: 100%;
+    max-width: 500px; 
+    height: auto;
+    border: 2px solid #333333;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.print-miniatura:hover {
+    border-color: rgb(131, 181, 131); 
+    transform: scale(1.01); 
+    cursor: zoom-in;
+}
+
+.legenda-zoom {
+    font-size: 13px;
+    color: #888888;
+    font-family: 'Gill Sans', sans-serif;
+    display: block;
+    margin-top: 5px;
+}
+
+/* --- LIGHTBOX MODAL --- */
+.modal-zoom-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9); 
+    z-index: 9999; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.modal-zoom-background:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.fechar-modal-area {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: zoom-out;
+}
+
+.modal-conteudo {
+    position: relative;
+    max-width: 90%;
+    max-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.modal-conteudo img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 80vh;
+    border: 2px solid #444444;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.botao-fechar-modal {
+    color: white;
+    background-color: #121212;
+    border: 1px solid #333333;
+    padding: 6px 12px;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 14px;
+    margin-bottom: 10px;
+    transition: all 0.2s;
+}
+
+.botao-fechar-modal:hover {
+    background-color: rgb(131, 181, 131);
+    color: black;
+}
+
+/* ==========================================================================
+   EFEITO DE DETALHE VERDE NOS CARDS DO PORTFÓLIO
+   ========================================================================== */
+.secoes-lado-a-lado .coluna-portfolio {
+    border: 1px solid rgba(131, 181, 131, 0.3); /* Borda fina verde sutil */
+    border-radius: 12px;                        /* Arredonda os cantos igual ao seu design */
+    padding: 25px;                              /* Dá um espaço interno para o texto não colar na borda */
+    background: #09090b;                        /* Garante o fundo escuro do card */
+    box-shadow: 0 0 15px rgba(131, 181, 131, 0.05); /* Um brilho verde bem discreto no fundo */
+    transition: all 0.3s ease;                  /* Deixa o efeito suave */
+}
+
+/* Efeito bônus: Quando o usuário passar o mouse em cima do card, ele ganha mais foco */
+.secoes-lado-a-lado .coluna-portfolio:hover {
+    border-color: rgb(131, 181, 131);           /* A borda acende no verde total */
+    box-shadow: 0 0 20px rgba(131, 181, 131, 0.2); /* O brilho verde expande suavemente */
+}
