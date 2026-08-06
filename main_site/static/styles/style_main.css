@@ -473,3 +473,8 @@ body {
     border-color: rgb(131, 181, 131);           /* A borda acende no verde total */
     box-shadow: 0 0 20px rgba(131, 181, 131, 0.2); /* O brilho verde expande suavemente */
 }
+
+.minha-logo {
+  width: 150px; /* Altere para o tamanho desejado em px, % ou rem */
+  height: auto;  /* Mantém a proporção correta sem distorcer */
+}
