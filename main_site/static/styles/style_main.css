@@ -478,3 +478,9 @@ body {
   width: 150px; /* Altere para o tamanho desejado em px, % ou rem */
   height: auto;  /* Mantém a proporção correta sem distorcer */
 }
+
+.my-photo{
+
+    width: 500px;
+    height: auto;
+}
